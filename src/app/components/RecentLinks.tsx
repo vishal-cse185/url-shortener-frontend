@@ -14,7 +14,7 @@ export function RecentLinks() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/url/all')
+      .get('https://url-shortener-backend-s2uq.onrender.com/api/url/all')
       .then((response) => {
         setLinks(response.data.reverse());
       })

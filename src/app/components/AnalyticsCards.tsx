@@ -16,7 +16,7 @@ export function AnalyticsCards() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/url/all')
+      .get('https://url-shortener-backend-s2uq.onrender.com/api/url/all')
       .then((response) => {
         const data: Url[] = response.data;
 

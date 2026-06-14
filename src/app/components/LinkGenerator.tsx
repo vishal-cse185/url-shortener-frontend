@@ -17,7 +17,7 @@ export function LinkGenerator({ onLinkGenerated }: LinkGeneratorProps) {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8080/api/url/shorten', {
+      const response = await axios.post('https://url-shortener-backend-s2uq.onrender.com/api/url/shorten', {
         originalUrl,
         customAlias: customAlias || undefined,
       });

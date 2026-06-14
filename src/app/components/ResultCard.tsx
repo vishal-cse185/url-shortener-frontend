@@ -21,7 +21,7 @@ export function ResultCard({ data }: ResultCardProps) {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/url/stats/${data.shortCode}`);
+      const response = await axios.get(`https://url-shortener-backend-s2uq.onrender.com/api/url/stats/${data.shortCode}`);
       setStats(response.data);
     } catch (error) {
       console.error('Error fetching stats:', error);
@@ -30,7 +30,7 @@ export function ResultCard({ data }: ResultCardProps) {
 
   const fetchQrCode = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/url/qr/${data.shortCode}`, {
+      const response = await axios.get(`https://url-shortener-backend-s2uq.onrender.com/api/url/qr/${data.shortCode}`, {
         responseType: 'blob',
       });
       const qrUrl = URL.createObjectURL(response.data);
